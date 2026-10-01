@@ -3,6 +3,7 @@
   "files": [
     ".github/workflows/ci.yml",
     ".github/workflows/nightly-check.yml",
+    ".github/workflows/pages.yml",
     ".gitignore",
     "AGENTS.md",
     "CLAUDE.md",

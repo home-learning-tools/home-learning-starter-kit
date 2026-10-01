@@ -1,6 +1,6 @@
 {
   "name": "home-learning-starter-kit",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "license": "MIT",
   "description": "AIアシスタントで家庭学習を回すスターターキット（予定・実績Markdownから読み取り専用の静的Webダッシュボードを生成）",
   "scripts": {

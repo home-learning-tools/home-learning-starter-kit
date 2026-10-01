@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "version": "0.1.4",
+  "version": "0.1.5",
   "files": [
     {
       "path": ".github/workflows/ci.yml",
@@ -11,6 +11,11 @@
       "path": ".github/workflows/nightly-check.yml",
       "size": 725,
       "sha256": "9ae3f8898762e9197131137fc8e61f1d890d2cbcb8063074b65dc0ec5a1adf51"
+    },
+    {
+      "path": ".github/workflows/pages.yml",
+      "size": 1310,
+      "sha256": "2bbdcab585b92c6f6fdc6867b8d142a62c9d8e20ac53403b2ea44f7fc4d89168"
     },
     {
       "path": ".gitignore",
@@ -39,8 +44,8 @@
     },
     {
       "path": "README.md",
-      "size": 12058,
-      "sha256": "8fd0f67c308bcec39eeaf18e55183dd52025e88de9ee5aa996d9826ae614eea3"
+      "size": 12405,
+      "sha256": "f8857b786351890277afd98b443231a3ca0667f954e155bf2ca1869e0dab0b35"
     },
     {
       "path": "docs/AI-OPERATIONS.md",
@@ -54,8 +59,8 @@
     },
     {
       "path": "docs/RELEASING.md",
-      "size": 7037,
-      "sha256": "c973b0b2c6cb73ef735ea88b1b6f846c9f824559817612e94136de853b57ba74"
+      "size": 7572,
+      "sha256": "8d2ba99e0aa5ec1f72f1ac346131748359b5bee43b4f927c920398906716c1e2"
     },
     {
       "path": "docs/WORKSPACE-CONTRACT.md",
@@ -114,8 +119,8 @@
     },
     {
       "path": "kit/distribution-files.json",
-      "size": 2001,
-      "sha256": "6aaf763a2f19ebcce4b1f66094f238df9493b7d9f786ba48cae45204f53bca4f"
+      "size": 2036,
+      "sha256": "4189dbd10498ee824a0ef10226d6388195deb15c6e9f9e18bac4d46d05b19773"
     },
     {
       "path": "kit/distribution.py",
@@ -215,7 +220,7 @@
     {
       "path": "package.json",
       "size": 746,
-      "sha256": "cd4c6658f283e1b78ea8180fbe76074a6dd433ba084f086d58411d319c82f486"
+      "sha256": "fd89a6b09fd59735d9706b184ba62c4addb3ab6a827c74be42dd88d9fd31e7ab"
     },
     {
       "path": "templates/activity-log.md",

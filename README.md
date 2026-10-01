@@ -14,6 +14,8 @@ AIへ自然言語で依頼すると、共通ルールに従って次の一連が
 6. **週次振り返り** — 実績から翌週の継続・調整を提案する
 7. **Webダッシュボード** — 結果を読み取り専用の静的ページで確認する
 
+架空の家族で動かした画面は、インストールせずに [公開demo](https://home-learning-tools.github.io/home-learning-starter-kit/) で見られます。
+
 Webは主役ではなく、AIが管理した結果を見る画面です。正本の構成は
 [workspace契約](docs/WORKSPACE-CONTRACT.md) で定義し、
 入力フォーム、認証、クラウド同期、AI APIの組み込み、外部送信機能はありません。
@@ -49,6 +51,8 @@ cd home-learning-starter-kit
 ZIPで取得した場合は、展開したディレクトリへ移動してください。
 
 ## 2. 架空demoを見る
+
+同じ画面は [公開demo](https://home-learning-tools.github.io/home-learning-starter-kit/) でも見られます。手元で生成する場合は次を実行します。
 
 ```sh
 python3 -m kit.starter_web --mode starter
