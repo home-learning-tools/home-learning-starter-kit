@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="material-type" content="worksheet">
+  <title>ワークシート（テンプレート）</title>
+  <!--
+    ワークシートの雛形です。作成ルールの正本は docs/AI-OPERATIONS.md。
+    - このファイルをコピーし、共通なら materials/shared/、個別なら
+      materials/learners/<学習者ID>/ へ保存して materials/index.md に登録する
+    - <meta name="material-type"> は消さない（materials/の全HTMLで種別宣言が必須。
+      worksheet=この雛形由来・構造検証強化 / reference=読みもの等）
+    - 1ファイルで自己完結させる（外部のCSS・JS・フォント・画像URLを読み込まない）
+    - A4設定・問題（class="problems"）・解答（class="answers"）・解答の改ページは保つ
+    - 学習者の学年で読めない漢字にはふりがな（<ruby>漢字<rt>かんじ</rt></ruby>）を付ける
+    - 第三者の教材の本文・設問・解答を複製しない
+  -->
+  <style>
+    * { box-sizing: border-box; }
+    @page { size: A4; margin: 14mm; }
+    body {
+      margin: 0; color: #24312d; background: #ffffff;
+      font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans",
+        "Yu Gothic", sans-serif;
+      line-height: 1.7;
+    }
+    main { max-width: 720px; margin: 0 auto; padding: 24px 16px; }
+    header.ws-header {
+      display: flex; justify-content: space-between; align-items: baseline;
+      gap: 12px; border-bottom: 3px solid #24312d; padding-bottom: 8px;
+    }
+    h1 { font-size: 1.3rem; margin: 0; }
+    .ws-meta { font-size: 0.85rem; color: #55605b; }
+    .ws-fields { display: flex; gap: 16px; margin: 12px 0 4px; font-size: 0.9rem; }
+    .ws-fields span { border-bottom: 1px solid #9aa39e; min-width: 120px;
+      display: inline-block; }
+    .ws-instruction {
+      margin: 16px 0; padding: 10px 12px; background: #f2f5f3;
+      border-left: 4px solid #4a7a63; font-size: 0.95rem;
+    }
+    ol.problems { padding-left: 1.6em; margin: 0; }
+    ol.problems > li { margin: 18px 0; }
+    .answer-space { border-bottom: 1px solid #9aa39e; height: 2.2em; }
+    section.answers {
+      margin-top: 32px; border-top: 2px dashed #9aa39e; padding-top: 12px;
+      font-size: 0.9rem;
+      /* 問題と解答を同じ印刷ページに出さない */
+      break-before: page; page-break-before: always;
+    }
+    section.answers h2 { font-size: 1rem; margin: 0 0 8px; }
+    @media print {
+      .no-print { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header class="ws-header">
+      <h1>（ワークシートの題名）</h1>
+      <div class="ws-meta">（教科・単元など）</div>
+    </header>
+
+    <div class="ws-fields">
+      <div>なまえ: <span>&nbsp;</span></div>
+      <div>日付: <span>&nbsp;</span></div>
+      <div>かかった時間: <span>&nbsp;</span> 分</div>
+    </div>
+
+    <p class="ws-instruction">（といていくときの説明を1〜2文で書く）</p>
+
+    <ol class="problems">
+      <li>
+        （問題文をここに書く）
+        <div class="answer-space"></div>
+      </li>
+      <li>
+        （問題文をここに書く）
+        <div class="answer-space"></div>
+      </li>
+    </ol>
+
+    <section class="answers">
+      <h2>こたえ（おうちの人向け）</h2>
+      <ol>
+        <li>（答え）</li>
+        <li>（答え）</li>
+      </ol>
+    </section>
+  </main>
+</body>
+</html>

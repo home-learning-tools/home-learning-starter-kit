@@ -1,0 +1,29 @@
+# public版スターターキット用のCI。抽出先リポジトリの .github/workflows/ci.yml へ配置する。
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+jobs:
+  check:
+    name: structure + demo build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Verify distribution manifest
+        run: python3 -m kit.distribution verify
+
+      - name: Check repo structure
+        run: python3 -m kit.starter_web.checkup
+
+      - name: Build demo dashboard
+        run: python3 -m kit.starter_web --mode starter

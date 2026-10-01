@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="material-type" content="reference">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>5分計算カード</title>
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; color: #24312d; background: #f3eee2;
+      font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", sans-serif; }
+    main { width: min(760px, calc(100% - 32px)); margin: 32px auto;
+      padding: 40px; background: #fffdf7; border: 1px solid #d8d1c3; }
+    header { display: flex; justify-content: space-between; align-items: end;
+      border-bottom: 3px solid #1f6a55; }
+    h1 { margin: 0 0 8px; font-size: 1.7rem; }
+    header p { margin: 0 0 10px; }
+    ol { display: grid; grid-template-columns: 1fr 1fr; gap: 18px 48px;
+      margin: 36px 0; padding-left: 34px; font-size: 1.35rem; }
+    li { padding: 12px; border-bottom: 1px solid #b9b3a8; }
+    .reflection { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+    .box { min-height: 110px; padding: 12px; border: 1px solid #b9b3a8; }
+    footer { margin-top: 24px; color: #66716c; font-size: .8rem; }
+    @media print { body { background: white; } main { margin: 0; border: 0; width: 100%; } }
+    /* stylelint-disable-next-line media-feature-range-notation */
+    @media (max-width: 560px) { main { padding: 24px; } ol,.reflection { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+  <main>
+    <header><h1>5分計算カード</h1><p>日付：　　　名前：</p></header>
+    <ol>
+      <li>7 × 8 =</li><li>9 × 6 =</li>
+      <li>42 ÷ 7 =</li><li>54 ÷ 9 =</li>
+      <li>63 ÷ 7 =</li><li>8 × 4 =</li>
+    </ol>
+    <section class="reflection">
+      <div class="box"><strong>できたこと</strong></div>
+      <div class="box"><strong>次にたしかめたいこと</strong></div>
+    </section>
+    <footer>家庭学習スターター・デモ用のオリジナル教材です。</footer>
+  </main>
+</body>
+</html>

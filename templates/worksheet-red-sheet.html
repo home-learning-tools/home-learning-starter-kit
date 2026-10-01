@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="material-type" content="worksheet">
+  <meta name="answer-layout" content="red-sheet">
+  <title>赤シートでたしかめるワークシート（テンプレート）</title>
+  <!-- 自作教材用。配置契約は docs/WORKSPACE-CONTRACT.md を参照。
+       色は印刷機・用紙・赤シートで変わります。カラー印刷して隠れ方を確認してください。
+       checkupは光学的な隠れ方やCSSの最終描画を判定しません。 -->
+  <style>
+    * { box-sizing: border-box; }
+    @page { size: A4; margin: 15mm; }
+    body {
+      margin: 0; color: #24312d; background: white;
+      font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Yu Gothic", sans-serif;
+      line-height: 1.8;
+    }
+    main { max-width: 720px; margin: 0 auto; padding: 20px; }
+    h1 { font-size: 1.4rem; }
+    .red-sheet-instructions { border: 1px solid #64756c; padding: 12px; }
+    .problems { padding-left: 1.8em; }
+    .problems > li { margin: 24px 0; break-inside: avoid; }
+    .red-sheet {
+      color: #ffaabb; font-size: 1.2rem;
+      -webkit-print-color-adjust: exact; print-color-adjust: exact;
+    }
+    @media print { main { padding: 0; } }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>赤シートで たしかめよう</h1>
+    <p>なまえ：　　　　　　　　日付：　　　　　　</p>
+    <p class="red-sheet-instructions">カラーで いんさつします。ピンクの こたえを
+      赤シートで かくして、ときましょう。といたら シートを はずして、こたえを
+      たしかめましょう。はじめに、おうちの人と こたえが かくれるか たしかめてください。</p>
+    <ol class="problems">
+      <li>2 ＋ 3 ＝ <span class="answers red-sheet">5</span></li>
+      <li>7 − 4 ＝ <span class="answers red-sheet">3</span></li>
+    </ol>
+  </main>
+</body>
+</html>

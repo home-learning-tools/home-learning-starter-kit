@@ -1,0 +1,15 @@
+{
+  "name": "home-learning-starter-kit",
+  "version": "0.1.4",
+  "license": "MIT",
+  "description": "AIアシスタントで家庭学習を回すスターターキット（予定・実績Markdownから読み取り専用の静的Webダッシュボードを生成）",
+  "scripts": {
+    "build:web:demo": "python3 -m kit.starter_web --mode starter",
+    "checkup": "python3 -m kit.starter_web.checkup",
+    "test": "python3 -m unittest discover tests -p 'test_kit_*.py'",
+    "check": "python3 -m kit.starter_web.checkup && python3 -m kit.starter_web --mode starter",
+    "check:nightly": "npm run check && npm test",
+    "release:manifest": "python3 -m kit.distribution generate",
+    "release:verify": "python3 -m kit.distribution verify"
+  }
+}

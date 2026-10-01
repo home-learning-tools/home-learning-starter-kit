@@ -1,0 +1,10 @@
+# public版スターターキット用の .gitignore。抽出先リポジトリのルートへ配置する。
+
+# 生成物（Markdownからいつでも再生成できる）
+dist/
+
+# Python
+__pycache__/
+
+# 利用者の実データ置き場（実名・学習記録をpublic forkへcommitしないための既定除外）
+workspace/

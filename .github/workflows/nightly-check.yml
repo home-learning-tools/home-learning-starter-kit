@@ -1,0 +1,28 @@
+# public版スターターキット用の夜間CI。抽出先リポジトリの
+# .github/workflows/nightly-check.yml へ配置する。
+name: Nightly unit tests
+
+on:
+  schedule:
+    # 毎時0分の混雑を避けるため JST 03:17（UTC 18:17）に実行する。
+    - cron: '17 18 * * *'
+
+jobs:
+  tests:
+    name: kit unit tests
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Verify distribution manifest
+        run: python3 -m kit.distribution verify
+
+      - name: Run nightly check
+        run: npm run check:nightly
